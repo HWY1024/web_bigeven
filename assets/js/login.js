@@ -21,7 +21,7 @@ $(function() {
                     return '用户名不能全为数字';
                 }
                 //如果不想自动弹出默认提示框，可以直接返回 true，这时你可以通过其他任意方式提示（v2.5.7 新增）
-                if (value === 'xxx') {
+                if (value === '逼') {
                     alert('用户名不能为敏感词');
                     return true;
                 }
@@ -63,14 +63,17 @@ $(function() {
         e.preventDefault();
         $.post(
             '/api/login',
-            $(this).serialize(),
+            $(this).serialize(), //data
             function(res) {
                 if (res.status !== 0) {
+                    // console.log(res)
                     return layer.msg(res.message)
                 }
                 layer.msg('登录成功')
                     // 将登陆成功得到的tokrn字符串添加到localStorage
                     // 有的接口需要权限
+                    // console.log(res)
+                    // console.log($(this).serialize())
                 localStorage.setItem('token', res.token)
                 location.href = '/index.html'
             }

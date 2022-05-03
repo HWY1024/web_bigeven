@@ -1,0 +1,48 @@
+.layui-footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+.iconfont {
+    margin-right: 8px;
+}
+
+.layui-icon {
+    margin-right: 8px;
+    margin-left: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.userinfo {
+    line-height: 60px;
+    height: 60px;
+    /*无法被选中 */
+    margin-left: 20px;
+    user-select: none;
+}
+
+.layui-side-scroll ul li:nth-child(1) {
+    border-top: 1px solid #282b33;
+}
+
+.text-avatar {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #009688;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    /* display: none; */
+}
+
+.layui-nav-img {
+    height: 40px;
+    width: 40px;
+    display: none;
+}
