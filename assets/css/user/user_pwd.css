@@ -1,0 +1,22 @@
+body,
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #f2f3f5;
+    opacity: 0.5;
+    padding: 15px;
+    background-image: url(/assets/images/bule.jpg);
+    background-size: 100%;
+}
+
+
+/* form {
+    height: 600px;
+} */
+
+.layui-form-item input {
+    width: 400px;
+}

@@ -36,14 +36,27 @@ function getUserInfo() {
 // 更新用户头像
 function RenderAvatar(user) {
     // 获取用户的真实名称或者是昵称
-    var name = user.username || user.nickname;
+    var name = user.nickname || user.username;
     $('#welcome').html('&nbsp&nbsp欢迎&nbsp&nbsp' + name[0] + '哥')
         // 判断用户头像
     var pic = user.user_pic;
     if (pic !== null) {
         $('.text-avatar').hide()
         $('.layui-nav-img').attr('src', user.user_pic).show()
+    } else {
+        $('.layui-nav-img').hide()
+        $('.text-avatar').html(name[0].toUpperCase()).show()
     }
-    $('.layui-nav-img').hide()
-    $('.text-avatar').html(name[0].toUpperCase()).attr("style", "display:''")
+}
+
+function exit() {
+    var layer = layui.layer;
+    $('#exit').on('click', function() {
+        // return layui.layer.confirm('退出成功')
+        layer.confirm(function(index) {
+            layer.close(index);
+            localStorage.removeItem('token')
+            location.href = '/login.html'
+        });
+    })
 }
