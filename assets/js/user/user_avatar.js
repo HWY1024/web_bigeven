@@ -18,8 +18,8 @@ $(function() {
     var layer = layui.layer
     $('#file').on('change', function(e) {
         var filesList = e.target.files
-        console.log(e.target.files)
-        console.log(e.target.files[0])
+            // console.log(e.target.files)
+            // console.log(e.target.files[0])
         if (filesList.length === 0)
             return layer.msg('请选择图片')
 

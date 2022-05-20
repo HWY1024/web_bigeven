@@ -1,0 +1,26 @@
+body,
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #f2f3f5;
+    /* opacity: 0.5; */
+    padding: 15px;
+    /* background-image: url(/assets/images/wallhaven-m9y9j1.jpg);
+    background-size: 100%; */
+}
+
+.layui-card-header {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#addCategory_form,
+#form_edit {
+    padding-top: 35px;
+    padding-right: 30px;
+}
